@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Waarschuwing voor phishing!</title>
+  <style>
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: black;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .waarschuwing {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: clamp(24px, 5vw, 55px);
+    }
+
+    .lamp {
+      width: 55px;
+      height: 80px;
+      background: #008cff;
+      border-radius: 25px 25px 8px 8px;
+      flex-shrink: 0;
+      animation: flits 0.8s infinite alternate;
+    }
+
+    .rechts {
+      animation-delay: -0.8s;
+    }
+
+    @keyframes flits {
+      from {
+        opacity: 0.15;
+        box-shadow: none;
+      }
+      to {
+        opacity: 1;
+        box-shadow: 0 0 40px 20px #008cff;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="waarschuwing">
+    <div class="lamp"></div>
+    <h1>Klik niet op elke link,<br>pas op voor phishing!</h1>
+    <div class="lamp rechts"></div>
+  </div>
+</body>
+</html>
